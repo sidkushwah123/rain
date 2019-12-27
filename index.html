@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-color: rgb(13, 9, 43);
+            }
+            .cloud{
+                background-image: url(cloud.png);
+                width: 100%;
+                height: 250px;
+                background-size: 100% 100%;
+                margin-top: -550px;
+               
+                animation: cloud 40s infinite ;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+              }
+            @keyframes cloud{
+                 0%{ margin-left: -1550px;}
+                 50%{margin-left: -100px;}
+                 100%{margin-left: 0px;}
+            }
+            .city{
+                background: url(city.png);
+                height: 300px;
+                width: 100%;
+                background-size:100% 100%;
+                margin-top: 200px;
+                animation: city 90s infinite;
+               
+            }
+            @keyframes city{
+                from{background-position: 0 0;} 
+                to{background-position: -8120px 0;}
+            }
+            .road{
+                background-image: url(road.png);
+                height: 250px;
+                width: 100%;
+                background-size: 100% 100%;
+                margin-top: 300px;
+                animation: road 90s infinite;
+                
+            }
+            @keyframes road{
+                from{background-position: 0 0;}
+                to{background-position: -8120px 0;}
+            }
+            .cat{
+             background: url('http://evasantos.com/ilustraciones/gatoCity/gatito.svg');
+             height: 297px; 
+             width: 507.5px;
+             margin-top: -380px;
+             margin-left: 2em;
+             animation: cat 1.2s steps(16,end) infinite;
+                
+             }
+             @keyframes cat { 
+                from { background-position: 0 0; }
+                to { background-position: -8120px 0; }
+              }
+            .rain{
+                background-image: url(rain.png);
+                height: 550px;
+                width: 1300px;
+                background-size: 100% 100%;
+                margin-top: -500px;
+                margin-left: 100px;
+                animation: rain 50s ;
+                animation-direction: alternate;
+                animation-delay: 20s;
+                opacity: 0;
+            }
+            @keyframes rain { 
+                0%{ opacity: 0;}
+                 50%{opacity: 0.5;}
+                 75%{opacity: 0.8}
+                 100%{opacity: 0;}
+                 from { background-position: 0 0; }
+                to { background-position: 0 +8000px; }
+                
+              }
+
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="city"></div>
+        <div class="cloud"></div>
+        <div class="road"></div>
+        <div class="cat"></div>
+        <div class="rain"></div>
+    </body>
+</html>
